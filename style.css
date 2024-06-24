@@ -1,0 +1,282 @@
+/* Normalización */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Teko", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    /*Momentaneo*/
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: transparent;
+
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease;
+
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 35px;
+    z-index: 101;
+}
+
+.menu-icon-action {
+    display: none;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Inconsolata", monospace;
+    background: linear-gradient(245.59deg, #793104 0%, #92542e 25%, #230e02 75%);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0% 8%;
+}
+
+.hero-text h1 {
+    font-family: "Inconsolata", monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+
+}
+
+.hero-text h5 {
+    font-family: "Inconsolata", monospace;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.hero-text h4 {
+    font-family: "Inconsolata", monospace;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.hero-text p {
+    font-family: "Inconsolata", monospace;
+    font-size: 90%;
+    margin: 0 0 40px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.hero-img img {
+    width: 400px;
+    height: 300px;
+    margin: 30px 0 0 50px;
+    transition: all 3s linear;
+}
+
+.hero-img img:hover {
+    width: 430px;
+    height: 330px;
+    opacity: 0.6;
+}
+
+.hero-text a {
+    display: inline-block;
+    background-color: #4d4d4d;
+    border: 1px solid transparent;
+    line-height: 1.4;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.hero-text a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.jobs {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.jobs:hover {
+    transform: translateX(12px);
+}
+
+.hero-text a.jobs i,
+a.cv i {
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0% 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    font-size: 25px;
+    margin: 20px 0;
+    transition: all .5s ease;
+}
+
+.icons i:hover {
+    color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+
+.scroll-down i {
+    display: block;
+    font-size: 50px;
+    color: white;
+    transition: all .5s ease;
+}
+
+.scroll-down:hover i {
+    color: #4d4d4d;
+    font-size: 55px;
+    transform: translateY(-5px);
+}
+
+
+
+@media (max-width:992px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .icons,
+    .scroll-down {
+        display: none;
+    }
+
+    .hero-text {
+        /* padding-top: 0; */
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+    }
+
+    .hero-img img:hover {
+        width: 90%;
+    }
+
+    .hero-text p {
+        font-size: 90%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .menu-icon-action {
+        display: block;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-img img {
+        margin: 0;
+    }
+
+    .hero {
+        height: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: #281102e7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 4px 0px;
+    }
+
+    #menu-toggle:checked+label.menu-icon-action+ul {
+        right: 0;
+    }
+}
